@@ -1,0 +1,248 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner (System.in);
+	    int vida = 120;
+	    final int daño= 30;
+	    int preguntas = 10;
+	    int aciertos=0;
+	    int errores=0;
+	    int j=0;
+	    boolean juego=true;
+	    ArrayList<String> preguntasFalladas = new ArrayList<>();
+	    
+	    System.out.println("=========================");
+	    System.out.println("      QUIZ DE CINE");
+	    System.out.println("=========================");
+	    j++;
+	    do {
+	    switch(j){
+	        case 1:
+	            String preg1 = "1. ¿Que modelo de automovil se usa en la pelicula 'Devuelta al Futuro'?";
+	            System.out.println(preg1 + "\n" + "a)Ford Escort b)Volvo 420 c)BYD Dolphin d)Delorean");
+	            String opcion = sc.nextLine();
+	            if (opcion.equals("d") || opcion.equals("D")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg1 + " (d)");
+	            }
+	            j++;
+	        break;
+	        case 2:
+	            String preg2 = "2. ¿De que marca de hamburguesa compro el personaje de Tom Hanks en 'La Terminal'?";
+	            System.out.println(preg2 + "\n" + "a)Burger King b)McDonald's c)Five Guys d)Shake shack");
+	            opcion = sc.nextLine();
+	            if (opcion.equals("a") || opcion.equals("A")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg2 + " (a)");
+	            }
+	            j++;
+	        break;
+	        case 3:
+	            String preg3 = "3. En 'La Matrix', ¿de que color es la pildora que tomo Neo?";
+	            System.out.println(preg3 + "\n" + "a)Verde b)Rojo c)Azul d)Morado");
+	             opcion = sc.nextLine();
+	            if (opcion.equals("b") || opcion.equals("B")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg3 + " (b)");
+	            }
+	            j++;
+	        break;
+	        case 4:
+	            String preg4 = "4. En 'El Padrino', ¿La cabeza de que animal formo parte de una escena iconica?";
+	            System.out.println(preg4 + "\n" + "a)Gato b)Caballo c)Cerdo d)Perro");
+	             opcion = sc.nextLine();
+	            if (opcion.equals("b") || opcion.equals("B")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg4 + " (b)");
+	                if (vida <= 0){
+	                    vida = 0;
+	                    j = 11;
+	                }
+	            }
+	            j++;
+	        break;
+	        case 5:
+	            String preg5 = "5. Como se llama un cuarto de libra con queso en Francia, segun Vincent Vega de 'Pulp Fiction'?";
+	            System.out.println(preg5 + "\n" + "a)Un cuarto de libra con queso b)Omelette du Formage c)Una royale con queso d)Un sandwich de kilo");
+	             opcion = sc.nextLine();
+	            if (opcion.equals("c") || opcion.equals("C")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg5 + "(c)");
+	                if (vida <= 0){
+	                    vida = 0;
+	                    j = 11;
+	                }
+	            }
+	            j++;
+	        break;
+	        case 6:
+	            String preg6 = "6. ¿Cual es el nombre verdadero del personaje de Uma Thurman, 'La Novia', de 'Kill Bill'?";
+	            System.out.println(preg6 + "\n" + "a)Betty K. Bill b)Uma Thurman c)Beatrix Kiddo d)Juana Lopez Rupere");
+	             opcion = sc.nextLine();
+	            if (opcion.equals("c") || opcion.equals("C")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg6 + " (c)");
+	                if (vida <= 0){
+	                    vida = 0;
+	                    j = 11;
+	                }
+	            }
+	            j++;
+	        break;
+	        case 7:
+	            String preg7 = "7. Segun la filosofia de Forrest Gump pasada de su Madre, ¿la vida es como...?";
+	            System.out.println(preg7 + "\n" + "a) Una caja de chocolates b)Una orden de empanadas c)una bolsa de pan d)un costal de piloncillo");
+	             opcion = sc.nextLine();
+	            if (opcion.equals("a") || opcion.equals("A")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg7 + "(a)");
+	                if (vida <= 0){
+	                    vida = 0;
+	                    j = 11;
+	                }
+	            }
+	            j++;
+	        break;
+	        case 8:
+	            String preg8 = "8. En su punto mas bajo de la pelicla, ¿En donde se tuvo que dormir el personaje de Will Smith en 'En Busca de la Felicidad'?";
+	            System.out.println(preg8 + "\n" + "a) En un carro b)En un baño de la estacion de monoriel c)Debajo de un puente d)En un callejon");
+	             opcion = sc.nextLine();
+	            if (opcion.equals("b") || opcion.equals("B")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg8 + " (b)");
+	                if (vida <= 0){
+	                    vida = 0;
+	                    j = 11;
+	                }
+	            }
+	            j++;
+	        break;
+	        case 9:
+	            String preg9 = "9. ¿Que evento ocurrio al final de la pelicula romantica 'Recuerdame' que causo sus perdidas masivas?";
+	            System.out.println(preg9 + "\n" + "a) La guerra de Irak b)La explosion de Chernobyl c)el 11/9 d)A alguien le duele el oido");
+	             opcion = sc.nextLine();
+	            if (opcion.equals("c") || opcion.equals("C")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg9 + " (c)");
+	                if (vida <= 0){
+	                    vida = 0;
+	                    j = 11;
+	                }
+	            }
+	            j++;
+	        break;
+	        case 10:
+	            String preg10 = "10. En 'Little Miss Sunshine', ¿Cual es el sueño del personaje de Paul Dano, Dwayne?";
+	            System.out.println(preg10 + "\n" + "a)Ser un piloto de las Fuerzas Aeras b)Ser el mejor jugador de su equipo de Futbol c)Cambiar el mundo con su ideologia d)Escribir un libro galandorado");
+	             opcion = sc.nextLine();
+	            if (opcion.equals("a") || opcion.equals("A")) {
+	                System.out.println("¡Correcto!");
+	                aciertos++;
+	                if (vida < 120) {
+	                    vida += 5;
+	                }
+	            } else {
+	                System.out.println("Incorrecto.");
+	                errores++;
+	                vida -= daño;
+	                preguntasFalladas.add(preg10 + " (a)");
+	                if (vida <= 0){
+	                    vida = 0;
+	                    j = 11;
+	                }
+	            }
+	            j++;
+	        break;
+	       
+	    }
+	}while (j <= 10);
+	int porcentaje = (aciertos*100) /10;
+	System.out.println("========== RESUMEN ===========");
+	            System.out.println("Preguntas contestadas: " + (aciertos+errores) + " de " + preguntas);
+	            System.out.println("Aciertos: " + aciertos + "\n" + "Errores: " + errores);
+	            System.out.println("Porcentaje: " + "%" + porcentaje);
+	            System.out.println("Vida final: " + vida);
+	            if (porcentaje >= 90) {
+	                System.out.println("Resultado: Excelente");
+	            } else if (porcentaje <90 && porcentaje >= 70){
+	                System.out.println("Resultados: Aprobado");
+	            } else {
+	            System.out.println("Resultado: Necesitas repasar");
+	            }
+	            System.out.println("Preguntas en las que te equivocaste:");
+	            for (String pregunta : preguntasFalladas) {
+	                System.out.println("- " + pregunta);
+	            }
+    }
+}
